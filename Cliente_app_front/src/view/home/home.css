@@ -1,0 +1,41 @@
+/*---------------------------------------------------
+                    Principal
+---------------------------------------------------*/
+.section-main{ 
+    background-color:#f4f4f4;     
+    width:50%; 
+}
+
+.section-main .content {
+    width: 100%;    
+    padding:1%;    
+    float:left; 
+}
+
+.section-table{ 
+    background-color:#f4f4f4; 
+    width:50%; 
+}
+
+.section-table .content {
+    width: 100%;    
+    padding:1%;    
+    float:left; 
+}
+
+/*---------------------------------------------------
+                    Componenes
+---------------------------------------------------*/
+
+.form_input{    
+    background: transparent;    
+    border-color: black;
+}
+
+/*---------------------------------------------------
+                    Rodapé
+---------------------------------------------------*/
+
+.main_footer{ 
+    position: fixed;
+}

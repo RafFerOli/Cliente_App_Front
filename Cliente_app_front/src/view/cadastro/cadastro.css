@@ -1,0 +1,14 @@
+/*---------------------------------------------------
+                    Principal
+---------------------------------------------------*/
+.section-main{ 
+    padding:10px 0px; 
+    background-color:#f4f4f4; 
+    width:100%; 
+}
+
+.section-main .content {
+    padding:1em 0;    
+    float:left; 
+}
+

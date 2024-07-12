@@ -1,0 +1,178 @@
+<!-- Página ininical de navegação do sistema-->
+<!DOCTYPE HTML>
+<html>	
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/tabela.css">
+		<link rel="stylesheet" type="text/css" href="../../css/basicos.css">
+        <link rel="stylesheet" type="text/css" href="home.css">
+		
+		<!-- Titulo da aplicação -->
+		<title>Clientes</title>
+	</head>
+
+	<body>
+		
+		<!-- Cabeçalho de informações do sistema -->
+		<header class="main_header container">   				
+			<div class="content">
+				<h2>Controle de Clientes</h2>
+			</div>
+		</header>
+
+		<!-- Menu de navegação do sistema -->
+		<nav  class="main_nav container">   	
+			<ul style="margin-left: 0.5%;" class="menu">
+				<li><a href="home.html"><b>Inicio</b></a></li>				
+				<li><a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional" target="_blank"><b>Notas</b></a></li>
+			</ul>	
+		</nav>
+
+		<!-- Corpo principal da tela -->
+        <main class="main_content container">
+
+			<!-- Área de visualização de dados -->
+			<section class="section-main container">     
+				<div class="content">
+
+					<!-- Campos de Cadastro - nome/cnpj-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 58%; margin-right: 2%;">
+							<label for="nome" class="form_label">Nome:</label>
+							<input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" style="background-color: gainsboro;" readonly>
+						</div>
+						<div class="form_subgrupo" style="width: 40%;">
+							<label for="cnpj" class="form_label">CNPJ:</label>
+							<input type="text" name="cnpj" class="form_input" id="cnpj" data-format="99.999.999/9999-99" placeholder="CNPJ" required>						
+						</div>
+					</div>								                                
+
+					<!-- Campos de Cadastro - razao-->
+					<div class="form_grupo">
+						<label for="razao" class="form_label">Razão Social:</label>
+						<input type="text" name="razao" class="form_input" id="razao" placeholder="Razão Social" required>
+					</div>
+
+					<!-- Campos de Cadastro - endereco/numero-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 78%; margin-right: 2%;">
+							   <label for="endereco" class="form_label">Endereço:</label>
+							   <input type="text" name="endereco" class="form_input" id="endereco" placeholder="Endereço" required>
+						</div>
+						<div class="form_subgrupo" style="width: 20%;">
+							<label for="numero" class="form_label">Número:</label>
+							   <input type="text" name="numero" class="form_input" id="numero" placeholder="Número" required>
+						</div>
+					</div>
+
+					<!-- Campos de Cadastro - cidade/estado/telefone-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 48%; margin-right: 2%;">
+							<label for="cidade" class="form_label">Cidade:</label>
+							<input type="text" name="cidade" class="form_input" id="cidade" placeholder="Cidade" required>
+						</div>
+						<div class="form_subgrupo" style="width: 18%; margin-right: 2%;">
+							<label for="estado" class="form_label">Estado:</label>
+							<input type="text" name="estado" class="form_input" id="estado" placeholder="Estado" required>							   
+						</div>
+						<div class="form_subgrupo" style="width: 30%;">
+							<label for="telefone" class="form_label">Telefone:</label>
+							<input type="text" name="telefone" class="form_input" id="telefone" data-format="(99)9999-9999" data-alt-format ="(99)9-9999-9999" placeholder="Telefone" required>
+						</div>
+					</div>
+
+					<!-- Campos de Cadastro - bairro/cep/encontrar -->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 48%; margin-right: 2%;">
+							<label for="bairro" class="form_label">Bairro:</label>
+							<input type="text" name="bairro" class="form_input" id="bairro" placeholder="Bairro" required>
+						</div>
+						<div class="form_subgrupo" style="width: 28%; margin-right: 2%; ">
+							<label for="cep" class="form_label">CEP:</label>
+							<input type="text" name="cep" class="form_input" id="cep" data-format="99999-999" placeholder="CEP" required>
+						</div>
+						<div class="form_subgrupo" style="width: 20%; margin-top: 2%;">
+							<button type="button" name="atualizar" class="form_button"  onclick="Encontrar()">Encontrar</button>
+						</div>
+					</div>
+
+					<!-- Campos de Cadastro - email-->
+					<div class="form_grupo">
+						<label for="email" class="form_label">Email:</label>
+						<input type="text" name="email" class="form_input" id="email" placeholder="email" required>
+					</div>
+
+					<!--  Botão para ver lista completa de cadastro-->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 50%; margin-top: 1%">
+							<button type="button" name="atualizar" class="form_button"  onclick="window.location.href = '../lista/lista.html'">Lista completa de clientes</button>
+						</div>
+					</div>
+
+					<!-- Botão para salvar e gerar novo cadastro -->
+					<div class="form_grupo" style="width: 40%; float: right;">						
+						<div class="form_subgrupo" style="width: 58%; margin-right: 2%; margin-top: 1%;">
+							<button type="button" name="atualizar" class="form_button"  onclick="Atualizar()">Atualizar</button>
+						</div>
+						<div class="form_subgrupo" style="width: 40%; margin-top: 1%;">
+							<button type="button" name="Novo" class="form_button"  onclick="openPopup('../cadastro/cadastro.html')">Novo</button>
+						</div>	
+					</div>	
+				</div>
+			</section>
+
+			<!-- Seção de visualização de tabela -->
+			<section class="section-table container">    
+				<div class="content">
+
+					<!-- Campo de pesquisa -->
+					<div class="form_grupo">
+						<div class="form_subgrupo" style="width: 58%; margin-right: 1%;">
+							<label for="pesquisa" class="form_label">Pesquisa:</label>
+							<input type="text" name="pesquisa" class="form_input" id="pesquisa" placeholder="Nome do cliente" required>
+						</div>
+						<div class="form_subgrupo" style="width: 20%; margin-right: 1%; margin-top: 2%;">
+							<button type="button" name="Pesquisar" class="form_button" onclick="Pesquisar()">Pesquisar</button>
+						</div>	
+						<div class="form_subgrupo" style="width: 20%; margin-top: 2%;">
+							<button type="button" name="Novo" class="form_button"  onclick="location.reload()">Recarregar</button>
+						</div>	
+					</div>		
+
+					<!-- Tabela de regisros para visualização -->
+					<div class="table-container" style="max-height: 416px;">
+						<table id="tabela">
+							<tr>
+								<th style="width: 30%;">nome</th>
+								<th style="width: 20%">telefone</th>
+								<th style="width: 45%;">email</th>
+								<th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></td>
+							</tr>
+						</table>   
+					</div>
+
+				</div>    
+			</section>
+
+        </main>
+
+		<!-- Rodapé -->
+        <footer class="main_footer container">
+            <div class="main_footer_copy">
+        
+                <p class="m-b-footer"> Rafael - 2024, todos os direitos reservados.</p> 
+                <p class="by"><i class="icon icon-heart-3"></i> Desenvolvido por: Rafael Fernandes</p>
+            
+            </div>
+        </footer>
+
+		<script src="home.js"></script>
+		<script src="../../script.js"></script>
+    
+    </body>
+    
+</html>
