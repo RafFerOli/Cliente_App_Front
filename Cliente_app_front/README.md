@@ -2,12 +2,18 @@
 
 Este pequeno projeto tem como objetivo realizar a visualização do sistema de controle de informações dos clientes de uma pequena empresa através de uma interface desenvolvida em html, css e javascript.
 
+O interface pode cadastrar, exibir, pesquisar, editar e deletar registros de clientes possuindo uma ferramenta de busca que faz acesso a API gratuita extena cnpj.ws e buscando a localização do registro no google.maps através do endereço castrado.
+
 O objetivo aqui é demonstrar parte do conhecimento adquirido durante a disciplina de **Arquitetura de Software** 
+
+> Para maiores informações sobre cnpj_ws, consultar em: [Documentação](https://www.cnpj.ws/docs/intro)
 
 ---
 ## Como executar em modo de desenvolvimento
 
-Basta fazer o download do projeto e abrir o arquivo index.html licalizado na pasta **src** no seu browser.
+Basta fazer o download do projeto e abrir o arquivo index.html localizado na pasta **src** no seu browser.
+
+> Para executar o sistema completo será necessário fazer o download do projeto [Cliente App Front](https://github.com/RafFerOli/Fluxo_App_Front/tree/main), salvar a pasta Cliente_app_front e Cliente_app_api no mesmo diretório, abrir o diretório na IDE de sua escolha e seguir as instruções de [README.md](https://github.com/RafFerOli/Cliente_App_Front/blob/main/Cliente_app_front/README.md).
 
 ## Como executar através do Docker
 
