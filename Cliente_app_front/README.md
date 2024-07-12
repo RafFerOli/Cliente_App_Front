@@ -11,7 +11,7 @@ O objetivo aqui é demonstrar parte do conhecimento adquirido durante a discipli
 ---
 ## Como executar em modo de desenvolvimento
 
-Basta fazer o download do projeto e abrir o arquivo index.html localizado na pasta **src** no seu browser.
+Basta fazer o download do projeto e abrir o arquivo index.html localizado na pasta **src** no navegador de sua escolha.
 
 > Para executar o sistema completo será necessário fazer o download do projeto [Cliente App Front](https://github.com/RafFerOli/Fluxo_App_Front/tree/main), salvar a pasta Cliente_app_front e Cliente_app_api no mesmo diretório, abrir o diretório na IDE de sua escolha e seguir as instruções de [README.md](https://github.com/RafFerOli/Cliente_App_Front/blob/main/Cliente_app_front/README.md).
 
